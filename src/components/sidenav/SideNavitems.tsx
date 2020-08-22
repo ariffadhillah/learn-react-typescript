@@ -13,11 +13,11 @@ const SideNavItemType = [
     {icon:'users', label: 'Users'}
 ]
 
-const SideNavitems: React.FC<NavItem> = ({SideNavItemType}) => {    
+const SideNavitems: React.FC<NavItem> = () => {    
         return (
             <ul>
              {SideNavItemType.map((nav, icon) => {
-                return <li key={icon}>{nav.items}</li>;
+                return <li key={icon}>{nav.icon}</li>;
             })}
             </ul>
         )

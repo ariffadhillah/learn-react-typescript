@@ -1,6 +1,6 @@
 import React from "react";
 import SideNavitems from "./SideNavitems";
-
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 // import sidenavchild  from "../nav-item/sidenavchild";
 // https://react-typescript-cheatsheet.netlify.app/docs/hoc/excluding_props
@@ -18,7 +18,10 @@ const SideNav: React.FC = () => {
         return (
             <div>
                 <h1>I' am component</h1>
-                <SideNavitems  SideNavItemType={icon: 'dashboard', 'label': 'Dashboard'}, {icon:'users', label: 'Users'}/>
+                <Router>
+                    <Route path="/" component={SideNavitems} />
+                </Router>
+                {/* <SideNavitems  SideNavItemType={icon: 'dashboard', 'label': 'Dashboard'}, {icon:'users', label: 'Users'}/> */}
             </div>
         );
     

@@ -1,5 +1,7 @@
 import React from 'react';
 import SideNav  from "./components/sidenav/SideNav ";
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+// import Apps from "./Apps";
 // import { title } from 'process';
 
 // App: React.FC = () =>
@@ -7,7 +9,9 @@ import SideNav  from "./components/sidenav/SideNav ";
 const App = () => {
   return (
     <div className="App">
-      <SideNav/>
+      <Router>
+        <Route path="/" component={SideNav} />
+        </Router>
     </div>
     );
 };
