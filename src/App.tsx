@@ -1,6 +1,7 @@
 import React from 'react';
 import SideNav  from "./components/sidenav/SideNav ";
 import { BrowserRouter as Router, Route} from 'react-router-dom';
+import "./assets/scss/index.scss";
 // import Apps from "./Apps";
 // import { title } from 'process';
 

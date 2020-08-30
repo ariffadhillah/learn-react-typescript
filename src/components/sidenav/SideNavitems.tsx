@@ -1,26 +1,25 @@
 import React from "react";
 
-interface NavItemType  {
-    items: string;
-}
-
 interface NavItem {
     SideNavItemType: NavItemType[];
 }
 
-const SideNavItemType = [
-    {icon: 'dashboard', 'label': 'Dashboard'}, 
-    {icon:'users', label: 'Users'}
-]
+interface NavItemType  {
+   icon: string;
+   label: string;
+}
 
-const SideNavitems: React.FC<NavItem> = () => {    
-        return (
-            <ul>
-             {SideNavItemType.map((nav, icon) => {
-                return <li key={icon}>{nav.icon}</li>;
+const SideNavitems: React.FC<NavItem> = ({SideNavItemType}) => {    
+    return (
+      <ul>
+          {SideNavItemType.map((item) => {
+                return <li className={item.icon}><span>{item.icon} </span> </li>;
             })}
-            </ul>
-        )
-    };  
+      </ul>
+    )
+  }
+  
+  export default SideNavitems
 
-export default SideNavitems
+
+//   https://dev.to/jsmanifest/create-a-modern-dynamic-sidebar-menu-in-react-using-recursion-36eo
